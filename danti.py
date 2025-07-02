@@ -1,7 +1,7 @@
 import pygame
 
 class Danti(pygame.sprite.Sprite):
-    def __init__(self, *groups):
+    def __init__(self, *groups, hunger, attention):
         super().__init__(*groups)
 
         #danti animations#
@@ -18,12 +18,14 @@ class Danti(pygame.sprite.Sprite):
         self.current_emotion = self.danti_happy
         self.anim_index = 0
 
-        self.attention = 100
-        self.hunger = 100
+        self.attention = attention
+        self.hunger = hunger
 
         self.image = self.current_emotion[self.anim_index]
         self.rect = self.image.get_rect(midbottom = (150, 600))
 
+        print("hunger set to", hunger)
+        print("attention set to", attention)
     
     def anim_state(self):
         self.anim_index += 0.1

@@ -1,6 +1,7 @@
 import pygame
 from sys import exit
 import danti
+import save_load_manager
 
 pygame.init()
 
@@ -10,10 +11,12 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("TAMADANTI")
 clock = pygame.time.Clock()
 
-bg_surface = pygame.transform.scale(pygame.image.load('assets/background.png'), (300, 600))
+data = save_load_manager.load()
 
+bg_surface = pygame.transform.scale(pygame.image.load('assets/background.png'), (300, 600))
 dante = pygame.sprite.GroupSingle()
-dante.add(danti.Danti())
+d_obj = danti.Danti(hunger=data["hunger"], attention=data["attention"])
+dante.add(d_obj)
 
 
 
@@ -21,6 +24,7 @@ dante.add(danti.Danti())
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            save_load_manager.save(d_obj.hunger, d_obj.attention)
             pygame.quit()
             exit()
              
