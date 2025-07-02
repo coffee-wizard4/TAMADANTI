@@ -46,7 +46,7 @@ class Danti(pygame.sprite.Sprite):
 
     def decrease_food(self):
         self.hunger = 0 if self.hunger <= 0 else self.hunger - 0.1
-        self.attention = 0 if self.attention <= 0 else self.attention - 0.2
+        self.attention = 0 if self.attention <= 0 else self.attention - 0.1
 
     def feed(self):
         self.hunger = 100

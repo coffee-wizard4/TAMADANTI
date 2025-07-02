@@ -2,6 +2,7 @@ import pygame
 from sys import exit
 import danti
 import save_load_manager
+import button
 
 pygame.init()
 
@@ -18,6 +19,9 @@ dante = pygame.sprite.GroupSingle()
 d_obj = danti.Danti(hunger=data["hunger"], attention=data["attention"])
 dante.add(d_obj)
 
+feed_button = button.Button(0, 0, "assets/kibble.png", d_obj.feed, 3)
+pet_button = button.Button(0, 64, "assets/attention.png", d_obj.pet, 3)
+
 
 
 #game_loop
@@ -29,6 +33,8 @@ while True:
             exit()
              
     screen.blit(bg_surface, (0, 0))
+    feed_button.draw(screen)
+    pet_button.draw(screen)
     dante.draw(screen)
     dante.update()
     pygame.display.update()
