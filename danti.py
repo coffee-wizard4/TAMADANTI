@@ -1,4 +1,7 @@
 import pygame
+import json
+
+
 
 class Danti(pygame.sprite.Sprite):
     def __init__(self, *groups, hunger, attention):
