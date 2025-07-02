@@ -1,10 +1,5 @@
 import pygame
 
-class Emotion:
-    HAPPY = 0
-    SAD = 1
-    ANGRY = 2
-
 class Danti(pygame.sprite.Sprite):
     def __init__(self, *groups):
         super().__init__(*groups)
@@ -23,7 +18,6 @@ class Danti(pygame.sprite.Sprite):
         self.current_emotion = self.danti_happy
         self.anim_index = 0
 
-        self.emotion = Emotion.HAPPY
         self.attention = 100
         self.hunger = 100
 
@@ -46,8 +40,8 @@ class Danti(pygame.sprite.Sprite):
             self.current_emotion = self.danti_happy
 
     def decrease_food(self):
-        self.hunger -= 0.01
-        self.attention -= 0.02
+        self.hunger = 0 if self.hunger <= 0 else self.hunger - 0.1
+        self.attention = 0 if self.attention <= 0 else self.attention - 0.2
 
     def feed(self):
         self.hunger = 100
