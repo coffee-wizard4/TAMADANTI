@@ -10,12 +10,11 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("TAMADANTI")
 clock = pygame.time.Clock()
 
-bg_surface = pygame.image.load('assets/background.png')
+bg_surface = pygame.transform.scale(pygame.image.load('assets/background.png'), (300, 600))
 
 dante = pygame.sprite.GroupSingle()
 dante.add(danti.Danti())
 
-guy = pygame.image.load('assets/danti/happy_0001.png')
 
 
 #game_loop
