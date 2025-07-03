@@ -1,22 +1,22 @@
 {
     "happy":[
-        "mijn papsie geeft mij soms beef",
-        "ooo zoweke ik hou van jou",
-        "ik ben een klein mannetje",
-        "ik doe graag dutjes met jou zoweke"
+        "mijn papsie \n geeft mij soms beef",
+        "ooo zoweke \n ik hou van jou",
+        "ik ben een \n klein mannetje",
+        "ik doe graag dutjes \n met jou zoweke"
     ],
 
     "angry":[
-        "waarom krijg ik geen aandacht!",
-        "stom kobbeke blijft waarschijnlijk slapen...",
+        "waarom krijg ik geen \n aandacht!",
+        "stom kobbeke blijft \n waarschijnlijk slapen...",
         "ik haat kobbeke...",
-        "geef mij aaitjes, ben krewellig"
+        "geef mij aaitjes, \n ben krewellig"
     ],
 
     "sad":[
-        "ik heb zoveel honger...",
-        "please geef mij eten!!!",
-        "mag ik een stukje beef zoals mijn papsie",
-        "mag ik een brokje, zoweke"
+        "ik heb \n zoveel honger...",
+        "please geef \n mij eten!!!",
+        "mag ik een stukje \n beef zoals mijn papsie",
+        "mag ik een brokje \n, zoweke"
     ]
 }

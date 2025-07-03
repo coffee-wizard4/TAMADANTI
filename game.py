@@ -22,6 +22,7 @@ dante.add(d_obj)
 feed_button = button.Button(0, 0, "assets/kibble.png", d_obj.feed, 3)
 pet_button = button.Button(0, 64, "assets/attention.png", d_obj.pet, 3)
 
+font = pygame.font.Font("assets/Minecraftia-Regular.ttf")
 
 
 #game_loop
@@ -37,5 +38,7 @@ while True:
     pet_button.draw(screen)
     dante.draw(screen)
     dante.update()
+    screen.blit(font.render(d_obj.quote, True, "black", "white"), (50, 250))
+
     pygame.display.update()
     clock.tick(20)
